@@ -1,0 +1,17 @@
+{
+  "name": "gign-ticket-bot",
+  "version": "1.0.0",
+  "description": "Bot de tickets (3 catégories) pour le GIGN RP (Bordeaux RP), déployable sur Railway",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^16.6.1"
+  }
+}
