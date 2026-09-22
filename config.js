@@ -27,13 +27,13 @@ module.exports = {
 
   // --- Message du panel (Components V2, image en dessous du texte) -----------
   PANEL_IMAGE_PATH: './assets/ticket-banner.png',
-  PANEL_TITLE: '<:GIGN:1552049526016319550> - SUPPORT GIGN — Ouvrir un ticket',
+  PANEL_TITLE: '<:GIGN:1552049526016319550> - SUPPORT GIGN — OUVRIR UN TICKET',
   PANEL_MESSAGE:
     '## <:Fleche_bleu:1552049657658605628> Bienvenue sur le système de tickets officiel du **GIGN**.\n\n' +
-    '> Ce service permet d\'entrer en contact direct et confidentiel avec le commandement de l\'unité, en dehors ' +
+    '> - Ce service permet d\'entrer en contact direct et confidentiel avec le commandement de l\'unité, en dehors ' +
     'des salons publics du serveur. Chaque demande est traitée individuellement, dans un salon privé créé ' +
     'spécialement pour toi, visible uniquement par toi-même et le staff habilité.\n\n' +
-    '> Avant d\'ouvrir un ticket, merci de vérifier que ta demande n\'a pas déjà de réponse dans les salons ' +
+    '> - Avant d\'ouvrir un ticket, merci de vérifier que ta demande n\'a pas déjà de réponse dans les salons ' +
     'd\'information du serveur, et de choisir la catégorie la plus adaptée ci-dessous grâce au menu déroulant : ' +
     'cela permet à l\'équipe de traiter ta demande plus rapidement et par la bonne personne.\n\n' +
     '<:Flche:1552049590339903579> **Ouverture de dossier** — `pour signaler un incident, un manquement au règlement ou déposer un rapport ' +
@@ -62,7 +62,7 @@ module.exports = {
       CHANNEL_PREFIX: 'dossier',
       OPEN_TITLE: '📁 Ouverture de dossier',
       OPEN_MESSAGE:
-        'Bonjour {user}, merci d\'avoir ouvert un dossier.\n\n' +
+        'Bonjour **{user}**, merci d\'avoir ouvert un dossier.\n\n' +
         'Merci de détailler ci-dessous, avec le plus de précision possible :\n' +
         '- La date et l\'heure des faits ;\n' +
         '- Les personnes impliquées ;\n' +
