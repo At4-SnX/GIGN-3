@@ -239,21 +239,30 @@ async function handleOpenTicket(interaction, type) {
     .setLabel(config.CLOSE_BUTTON_LABEL)
     .setStyle(ButtonStyle.Danger);
 
+  const staffMention = config.STAFF_ROLE_ID ? `<@&${config.STAFF_ROLE_ID}> ` : '';
   const openContainer = new ContainerBuilder()
     .setAccentColor(parseInt(config.PANEL_COLOR.replace('#', ''), 16))
     .addTextDisplayComponents(
       new TextDisplayBuilder().setContent(
-        `## ${def.OPEN_TITLE}\n${def.OPEN_MESSAGE.replace('{user}', `<@${interaction.user.id}>`)}`
+        `${staffMention}<@${interaction.user.id}>\n\n## ${def.OPEN_TITLE}\n${def.OPEN_MESSAGE.replace('{user}', `<@${interaction.user.id}>`)}`
       )
     )
     .addActionRowComponents(new ActionRowBuilder().addComponents(closeButton));
 
-  const staffMention = config.STAFF_ROLE_ID ? `<@&${config.STAFF_ROLE_ID}>` : '';
-  await channel.send({
-    content: `${staffMention} <@${interaction.user.id}>`.trim(),
-    components: [openContainer],
-    flags: MessageFlags.IsComponentsV2,
-  });
+  // ⚠️ Le flag IsComponentsV2 interdit le champ "content" sur le message :
+  // les mentions doivent passer par le texte du container ci-dessus.
+  try {
+    await channel.send({
+      components: [openContainer],
+      flags: MessageFlags.IsComponentsV2,
+      allowedMentions: { parse: ['users', 'roles'] },
+    });
+  } catch (err) {
+    console.error('Erreur lors de l\'envoi du message dans le salon de ticket :', err);
+    return interaction.editReply({
+      content: `⚠️ Le salon ${channel} a été créé, mais le message d'accueil n'a pas pu être envoyé. Vérifie les logs Railway.`,
+    });
+  }
 
   await interaction.editReply({ content: `✅ Ton ticket a été créé : ${channel}` });
 }
