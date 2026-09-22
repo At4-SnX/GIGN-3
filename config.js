@@ -33,7 +33,7 @@ module.exports = {
     '> Ce service permet d\'entrer en contact direct et confidentiel avec le commandement de l\'unité, en dehors ' +
     'des salons publics du serveur. Chaque demande est traitée individuellement, dans un salon privé créé ' +
     'spécialement pour toi, visible uniquement par toi-même et le staff habilité.\n\n' +
-    'Avant d\'ouvrir un ticket, merci de vérifier que ta demande n\'a pas déjà de réponse dans les salons ' +
+    '> Avant d\'ouvrir un ticket, merci de vérifier que ta demande n\'a pas déjà de réponse dans les salons ' +
     'd\'information du serveur, et de choisir la catégorie la plus adaptée ci-dessous grâce au menu déroulant : ' +
     'cela permet à l\'équipe de traiter ta demande plus rapidement et par la bonne personne.\n\n' +
     '<:Flche:1552049590339903579> **Ouverture de dossier** — `pour signaler un incident, un manquement au règlement ou déposer un rapport ' +
@@ -42,8 +42,8 @@ module.exports = {
     'internes de l\'unité.`\n' +
     '<:Flche:1552049590339903579> **Demande Officier** — `pour solliciter directement l\'intervention ou la présence d\'un officier dans ' +
     'le cadre d\'une situation RP.`\n\n' +
-    '> Merci de rester courtois et de ne pas abuser de ce système : tout ticket créé sans motif valable pourra ' +
-    '*être fermé sans réponse. Un seul ticket ouvert par catégorie est autorisé à la fois.*',
+    '**Merci de rester courtois et de ne pas abuser de ce système : tout ticket créé sans motif valable pourra ' +
+    'être fermé sans réponse. Un seul ticket ouvert par catégorie est autorisé à la fois.**',
   PANEL_COLOR: '#1c2938',
   PANEL_FOOTER: '<:GIGN:1552049526016319550> - Gendarmerie Nationale — GIGN',
 
